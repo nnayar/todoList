@@ -1,0 +1,22 @@
+{
+	"items": [
+		{
+			"name": "homework",
+			"dueDate": "28/7/2016",
+			"priority": "High",
+			"done": true
+		},
+		{
+			"name": "shopping",
+			"dueDate": "25/7/2016",
+			"priority": "Medium",
+			"done": false
+		},
+		{
+			"name": "go outside",
+			"dueDate": "31/7/2016",
+			"priority": "Low",
+			"done": false
+		}
+	]
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Todo List</title>
+		<link rel="stylesheet" href="style.css">
+		<meta charset="utf-8">
+	</head>
+	<body>
+		<div class="todo-list">
+			<h1>My List of Things</h1>
+
+			<h2>To Do</h2>
+			<ul id="favourites">
+				<!-- tasks added here dynamically -->
+			</ul>
+
+			<form id="create-new-todo">
+				<input id="new-thing" type="text">
+				<input id="due-date" type="text" value="next week">
+				<input id="priority" type="text" value="Medium">
+				<input id="submit" type="submit" value="Create new thing">
+			</form>
+		</div>
+		<div class="display-options">
+			<form id="display">
+				<input id="required-priority" type="text" value="Medium">
+				<input id="submit" type="submit" value="Display by Priority">
+			</form>
+		</div>
+
+		<script id="item-template" type="x-handlebars-template">
+			<li class ="{{ done }}">
+				{{ name }} {{ dueDate }}  {{ priority }}
+				<a href="#" class="remove-item">x</a>
+			</li>
+		</script>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<script src="handlebars-v4.0.5.js"></script>
+		<script src="main.js" charset="utf-8"></script>
+	</body>
+</html>
