@@ -42,6 +42,7 @@ app.removeItem = function( event ){
 
 	// add a class to the li
 	var $item = $( this ).parent( 'li' );
+	console.log($item);
 	$item.addClass( 'is-hidden' );
 
 	// remove the li after a short delay
@@ -61,14 +62,16 @@ app.showByPriority = function( event ) {
 	var requiredPriority = $( '#priority' ).val();
 	console.log("required priorty is: ", requiredPriority);
 
-	$.getJSON( 'data.json', function( response ) {
-		console.log( response );
-		$.each( response.items, function( key, value ) {
-			if (value.priority == requiredPriority) {
-				// create an item for each object
-				app.createItem( value );
-			}
-		});
+	$( "#favourites" ).each ( function( index ) {
+		var $item = this;
+		console.log( $item );
+		if (value.priority != requiredPriority) {
+			$item.addClass( 'is-hidden' );
+			// remove the li after a short delay
+			setTimeout(function(){
+				$item.remove();
+			}, 500);
+		}
 	});
 };
 
