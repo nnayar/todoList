@@ -29,9 +29,9 @@
 
 		<script id="item-template" type="x-handlebars-template">
 			<li class ="{{ done }}">
-				<div class='item-in-list'>{{ name }}</div>
-				<div class='item-in-list'>{{ dueDate }}</div>
-				<div class='item-in-list'>{{ priority }}</div>
+				<div class='todo-name'>{{ name }}</div>
+				<div class='todo-duedate'>{{ dueDate }}</div>
+				<div class='todo-priority' id='todo-priority'>{{ priority }}</div>
 				<a href="#" class="remove-item">x</a>
 			</li>
 		</script>

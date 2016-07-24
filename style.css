@@ -86,7 +86,15 @@ body {
 	cursor:pointer;
 	transition:0.3s;
 }
-.item-in-list {
+.todo-name {
+	display: inline-block;
+	width: 30%;
+}
+.todo-duedate {
+	display: inline-block;
+	width: 30%;
+}
+.todo-priority {
 	display: inline-block;
 	width: 30%;
 }

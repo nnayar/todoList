@@ -62,20 +62,30 @@ app.toggleDone = function() {
 
 app.showByPriority = function( event ) {
 	event.preventDefault();
-	var requiredPriority = $( '#priority' ).val();
+	var requiredPriority = $( '#required-priority' ).val();
 	console.log("required priorty is: ", requiredPriority);
 
-	$( "#favourites" ).each ( function( index ) {
-		var $item = this;
-		console.log( $item );
-		if (value.priority != requiredPriority) {
-			$item.addClass( 'is-hidden' );
-			// remove the li after a short delay
-			setTimeout(function(){
-				$item.remove();
-			}, 500);
-		}
-	});
+	if (requiredPriority == 'All') {
+		$( ".todo-priority" ).each ( function( index ) {
+			console.log( "the index is ", index, " and the priority of todo is ", $( this ).text());
+			var $item = $( this ).parent( 'li' );
+			$item.removeClass( 'is-hidden' );
+			console.log ("I just displayed ", $item);
+		});
+	} else {
+		$( ".todo-priority" ).each ( function( index ) {
+			console.log( "the index is ", index, " and the priority of todo is ", $( this ).text());
+			if ( $(this).text() != requiredPriority) {
+				var $item = $( this ).parent( 'li' );
+				$item.addClass( 'is-hidden' );
+				console.log ("I just hid ", $item);
+				// // remove the li after a short delay
+				// setTimeout(function(){
+				// 	$item.remove();
+				// }, 500);
+			}
+		});
+	}
 };
 
 app.init = function( ) {
