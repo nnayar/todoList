@@ -4,7 +4,7 @@ body {
 	font-family: Avenir;
 }
 .todo-list {
-	width:400px;
+	width:800px;
 	margin:5rem auto;
 	padding:2em;
 
@@ -85,6 +85,10 @@ body {
 	border-bottom:1px solid #ccc;
 	cursor:pointer;
 	transition:0.3s;
+}
+.item-in-list {
+	display: inline-block;
+	width: 30%;
 }
 
 form {

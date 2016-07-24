@@ -8,7 +8,6 @@
 	<body>
 		<div class="todo-list">
 			<h1>My List of Things</h1>
-
 			<h2>To Do</h2>
 			<ul id="favourites">
 				<!-- tasks added here dynamically -->
@@ -30,7 +29,9 @@
 
 		<script id="item-template" type="x-handlebars-template">
 			<li class ="{{ done }}">
-				{{ name }} {{ dueDate }}  {{ priority }}
+				<div class='item-in-list'>{{ name }}</div>
+				<div class='item-in-list'>{{ dueDate }}</div>
+				<div class='item-in-list'>{{ priority }}</div>
 				<a href="#" class="remove-item">x</a>
 			</li>
 		</script>
@@ -40,3 +41,4 @@
 		<script src="main.js" charset="utf-8"></script>
 	</body>
 </html>
+

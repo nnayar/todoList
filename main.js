@@ -9,6 +9,7 @@
 //	Due date (simple) & Priority (default priority is Medium)
 //	Due date (next week means today +7, next monday, coming monday, etc...) 
 
+var dateUtil = require('date-util');
 var app = {};
 
 app.createItem = function( item ){
@@ -22,7 +23,8 @@ app.createItem = function( item ){
 app.handleSubmit = function( event ){
 	event.preventDefault();
 	var itemName = $( '#new-thing' ).val();
-	var itemDueDate = $( '#due-date' ).val();
+	var itemDueDateInput = $( '#due-date' ).val();
+	var itemDueDate = new Date().strtotime(itemDueDateInput);
 	var itemPriority = $( '#priority' ).val();
 	
 	var itemObject = {
