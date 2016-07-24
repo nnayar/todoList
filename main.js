@@ -24,7 +24,7 @@ app.handleSubmit = function( event ){
 	event.preventDefault();
 	var itemName = $( '#new-thing' ).val();
 	var itemDueDateInput = $( '#due-date' ).val();
-	var itemDueDate = new Date().strtotime(itemDueDateInput);
+	var itemDueDate = new Date().strtotime(itemDueDateInput).format("dd/mm/yyyy");
 	var itemPriority = $( '#priority' ).val();
 	
 	var itemObject = {
