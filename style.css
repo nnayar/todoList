@@ -62,7 +62,7 @@ body {
 
 
 .display-options {
-	width:400px;
+	width:800px;
 	margin:5rem auto;
 	padding:2em;
 
@@ -98,6 +98,12 @@ body {
 	display: inline-block;
 	width: 30%;
 }
+.priority-options {
+	display: inline-block;
+	width: 30%;
+
+}
+
 
 form {
 	display:flex;

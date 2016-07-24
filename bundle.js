@@ -62,7 +62,7 @@ app.toggleDone = function() {
 
 app.showByPriority = function( event ) {
 	event.preventDefault();
-	var requiredPriority = $( '#required-priority' ).val();
+	var requiredPriority = $( 'input:radio[name=priority-choices]:checked' ).val();
 	console.log("required priorty is: ", requiredPriority);
 
 	if (requiredPriority == 'All') {
@@ -98,7 +98,7 @@ app.init = function( ) {
 	});
 
 	$( '#create-new-todo' ).on( 'submit', app.handleSubmit );
-	$( '#display' ).on( 'submit', app.showByPriority );
+	$( '#priority-options' ).on( 'submit', app.showByPriority );
 	$( '#favourites' ).on( 'click', '.remove-item', app.removeItem );
 	$( '#favourites' ).on( 'click', 'li', app.toggleDone );
 };

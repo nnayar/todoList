@@ -21,10 +21,26 @@
 			</form>
 		</div>
 		<div class="display-options">
-			<form id="display">
-				<input id="required-priority" type="text" value="Medium">
-				<input id="submit" type="submit" value="Display by Priority">
+			<form id="priority-options">
+				<!-- <input name="priority-choices" id="required-priority" type="text" value="High"> -->
+				<div class ="priority-choices">
+					<input name="priority-choices" type="radio" value="High" /> High 
+					<input name="priority-choices" type="radio" value="Medium" checked /> Medium 
+					<input name="priority-choices" type="radio" value="Low" /> Low 
+					<input name="priority-choices" type="radio" value="All" /> All 
+				</div>
+				<div class="priority-options">
+				</div>
+				<div class="priority-options">
+					<input name="priority-choices" id="required-priority" type="submit" value="Display by Priority">
+				</div>
 			</form>
+<!--  			<select name="required-priority" form="priority-options">
+				<option value="All">All</option>
+				<option value="High">High</option>
+				<option value="Medium">Medium</option>
+				<option value="Low">Low</option>
+			</select> -->
 		</div>
 
 		<script id="item-template" type="x-handlebars-template">
